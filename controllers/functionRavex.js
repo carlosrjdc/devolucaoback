@@ -11,7 +11,7 @@ const Ravex = {
 
     const testemap = teste.map(async (item) => {
       const dadosmap = await Axios.get(
-        `api/nota-fiscal/obter-notas-fiscais-por-periodo?skip=${item}&take=1000&dataHoraInicio=2023-04-01T00:00:01&dataHoraFim=${data}T23:59:59`
+        `api/nota-fiscal/obter-notas-fiscais-por-periodo?skip=${item}&take=1000&dataHoraInicio=${data}T00:00:01&dataHoraFim=${data}T23:59:59`
       );
 
       return dadosmap.data.data;
